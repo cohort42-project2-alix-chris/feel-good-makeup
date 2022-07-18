@@ -118,7 +118,7 @@ makeupApp.form.addEventListener('submit', function(e){
 
 // A landing page with the app heading 'animalia' and a welcome message 'Learn more about wild animals'
 
-// A form containing 2 drop down menus to select 1- one of the 6 types of animals and 2- whether it's a day or night animal (diurnal vs. nocturnal)
+
 
 // Calling the init method
 makeupApp.init();
