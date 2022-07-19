@@ -2,11 +2,36 @@
 
 // Create namespace object to hold our app
 const makeupApp = {};
+makeupApp.APIcall = {};
+makeupApp.APIcallRandom = {};
+// makeupApp.randomizer = () => { Math.floor(Math.random() * 100 + 1) };
 // Create an init method
 makeupApp.init = () => {
-    // console.log("It works!");
-    makeupApp.getUserSelection();
+    makeupApp.events();
+    // makeupApp.displayProducts();
 }
+
+makeupApp.displayProducts = function () {
+    
+    if (makeupApp.APIcall.length !== 0) {
+        const name = document.createElement('h2');
+        name.innerText = makeupApp.APIcallRandom.name;
+        console.log('haha')
+        const brand = document.createElement('h3');
+        brand.innerText = makeupApp.APIcallRandom.brand;
+
+        const price = document.createElement('p');
+        price.innerText = makeupApp.APIcallRandom.price;
+
+        const liElement = document.createElement('li');
+        liElement.classList.add('product-card');
+
+        liElement.append(name, brand, price);
+        document.querySelector('#product-container').appendChild(liElement);
+    } else if(makeupApp.APIcall.length === 0){
+        alert("you lose");
+    }
+    }
 
 // Make an API call to the Makeup API
 makeupApp.getProducts = (type, tag) => {
@@ -14,16 +39,29 @@ makeupApp.getProducts = (type, tag) => {
     fetch(makeupApp.url)
     .then((response) => {
         // get the response object
-        console.log("It work");
         console.log(response);
         // parse the info into json
         return response.json();
     })
     .then((jsonData) => {
         // we now have the json data we can work with
+        makeupApp.APIcall = jsonData;
         console.log(jsonData);
-        // makeupApp.displayProduct(jsonData.object);
+        // if (jsonData.length == 0) {
+        //     alert("I lose");
+        // }
+        document.querySelector('#product-container').innerHTML = '';
+        // makeupApp.displayProducts(jsonData.object);
         // call XXX method
+    }).then(() => {
+        makeupApp.APIcallRandom = makeupApp.APIcall[Math.floor(Math.random() * makeupApp.APIcall.length)];
+    
+        if (makeupApp.APIcallRandom){
+            makeupApp.displayProducts();
+        }
+
+    // }).then(() => {
+        
     });
 }
 
@@ -31,64 +69,56 @@ makeupApp.getProducts = (type, tag) => {
 makeupApp.getUserSelection = () => {
     const selectedType = document.getElementById('product-type');
     const selectedTag = document.querySelector('#product-tag');
-    
+
     const selectedTypeValue = selectedType.value;
     const selectedTagValue = selectedTag.value;
 
     if (selectedTypeValue.length > 0 && selectedTagValue.length > 0) {
+        return makeupApp.getProducts(selectedTypeValue, selectedTagValue);
 
-        console.log(selectedTypeValue);
-        console.log(selectedTagValue);
-        console.log('please work!')
-
-        makeupApp.getProducts(selectedTypeValue, selectedTagValue);
     }
-    
+
     console.log(selectedTypeValue);
     console.log(selectedTagValue);
-    
-    // const optionSelected = selectedType.selectedOptions[2];
-    
-    // console.log(optionSelected);
-    
-    // const userSizeSelection = document.querySelector("input[name=size]:checked");
-    // const userPriceSelection = document.querySelector("input[name=price]:checked");
-    
-    // const selectedTypeValue = selectedType.option;
-    // const selectedTagValue = selectedTag.option;
-    
+
+
 }
 
 // Capture form and add event listener on submit button
+makeupApp.events = function () {
+    // let randomizer
+    makeupApp.form = document.querySelector("form");
 
-makeupApp.form = document.querySelector("form");
+    makeupApp.form.addEventListener('submit', function(e){
+        e.preventDefault();
+        makeupApp.getUserSelection();
+        makeupApp.getProducts();
+        // randomizer = Math.floor(Math.random() * makeupApp.APIcall.length + 1);
+        // console.log(makeupApp.APIcall.length);
+    })
+}
 
-makeupApp.form.addEventListener('submit', function(e){
-    e.preventDefault();
-    console.log('yayyyy');
-    makeupApp.getUserSelection();
-})
 
-// Filter the original array from API call using user selections
-// makeupApp.displayProduct = (makeupArray) => {
+// Display products on page
+
+// makeupApp.displayProducts = function () {
     
-//     makeupArray.filter((makeupObject) => {
-//         return makeupObject.price === "5.0";
+//         const name = document.createElement('h2');
+//         name.innerText = makeupApp.APIcallRandom.name;
 
-//     });
-//     console.log("tell me something");
+//         const brand = document.createElement('h3');
+//         brand.innerText = makeupApp.APIcallRandom.brand;
 
-// }
+//         const price = document.createElement('p');
+//         price.innerText = makeupApp.APIcallRandom.price;
 
+//         const liElement = document.createElement('li');
+//         liElement.classList.add('product-card');
 
-// Add error handling
-
-
-//// Store the user selection into separate variables
-// Capture the user selection (2 variables)
-
-
-
+//         liElement.append(name, brand, price);
+//         document.querySelector('#product-container').appendChild(liElement);
+//     }
+// // Add error handling
 
 
 // Listen to the submit on button to capture the user selection (create event listener)
@@ -122,3 +152,7 @@ makeupApp.form.addEventListener('submit', function(e){
 
 // Calling the init method
 makeupApp.init();
+
+
+
+// console.log(makeupApp.APIcall[randomizer].name);
