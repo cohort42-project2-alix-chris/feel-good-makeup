@@ -57,10 +57,10 @@ makeupApp.displayProducts = () => {
 
     const image = document.createElement('img');
     image.src = makeupApp.APIcallRandom.image_link;
-    image.alt = makeupApp.APIcallRandom.description;
+    image.alt = `Picture of ${makeupApp.APIcallRandom.name}`;
 
     document.querySelector('#product-container').append(name, brand, image);
-};
+}
 
 // Capture the form and add an event listener on the submit button
 makeupApp.events = () => {
@@ -73,6 +73,6 @@ makeupApp.events = () => {
 
 makeupApp.init = () => {
     makeupApp.events();
-};
+}
 
 makeupApp.init();
