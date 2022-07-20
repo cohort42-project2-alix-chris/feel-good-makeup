@@ -58,6 +58,10 @@ makeupApp.displayProducts = () => {
     const image = document.createElement('img');
     image.src = makeupApp.APIcallRandom.image_link;
     image.alt = `Picture of ${makeupApp.APIcallRandom.name}`;
+    image.addEventListener('error', function (event) {
+        event.target.src = "./assets/notfound_placeholder.svg";
+        event.onerror = null;
+    })
 
     document.querySelector('#product-container').append(name, brand, image);
 }
