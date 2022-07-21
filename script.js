@@ -55,6 +55,25 @@ makeupApp.displayProducts = () => {
     const brand = document.createElement('h3');
     brand.innerText = makeupApp.APIcallRandom.brand;
 
+    const price = document.createElement('p');
+    if (makeupApp.APIcallRandom.price !== null && makeupApp.APIcallRandom.price !== '0.0' && makeupApp.APIcallRandom.price !== 0.0) {
+        price.innerText = `Price: $${makeupApp.APIcallRandom.price}`;
+    } else {
+        price.innerText = `Price: unavailable`;
+    }
+
+    const rating = document.createElement('p');
+    if (makeupApp.APIcallRandom.rating !== null) {
+        rating.innerText = `Rating: ${makeupApp.APIcallRandom.rating}`;
+    } else {
+        rating.innerText = `Rating: unrated`
+    };
+    
+    const color = document.createElement('div');
+    color.innerText = makeupApp.APIcallRandom.product_colors.colour_name;
+    // const color = document.createElement('p');
+    // color.innerText = `${makeupApp.APIcallRandom.product_colors.hex_value} ${makeupApp.APIcallRandom.product_colors.colour_name}`;
+
     const image = document.createElement('img');
     image.src = makeupApp.APIcallRandom.image_link;
     image.alt = `Picture of ${makeupApp.APIcallRandom.name}`;
@@ -63,7 +82,7 @@ makeupApp.displayProducts = () => {
         event.onerror = null;
     })
 
-    document.querySelector('#product-container').append(name, brand, image);
+    document.querySelector('#product-container').append(name, brand, price, rating, color, image);
 }
 
 // Capture the form and add an event listener on the submit button
