@@ -1,0 +1,34 @@
+body {
+    background-image: url('../assets/background-image.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.wrapper {
+    max-width: 1280px;
+    width: 85%;
+    margin: 0 auto;
+    background-color: rgba($softGreyBeige, 0.9);
+};
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+};
+
+button {
+    cursor: pointer;
+    background-color: $lighterGreen;
+}
+
+i {
+    color: $lighterGreen;
+    font-size: 2rem;
+}

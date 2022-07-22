@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feel Good Makeup</title>
     <script src="https://kit.fontawesome.com/522cdd93db.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
@@ -32,8 +35,8 @@
 
                             <fieldset>
 
-                                <label for="product-type">Select the product type</label>
-                                <select name="product-type" id="product-type" required>
+                                <label for="productType">What type of makeup are you looking for?</label>
+                                <select name="productType" id="productType" required>
                                     <option value="" disabled selected>Select the product type</option>
                                     <option value="blush">Blush</option>
                                     <option value="bronzer">Bronzer</option>
@@ -50,8 +53,8 @@
 
                             <fieldset>
 
-                                <label for="product-tag">Select the product tag</label>
-                                <select name="product-tag" id="product-tag" required>
+                                <label for="productTag">Which eco-friendly feature is most important to you?</label>
+                                <select name="productTag" id="productTag" required>
                                     <option value="" disabled selected>Select the product tag</option>
                                     <option value="cruelty free">Cruelty free</option>
                                     <option value="natural">Natural</option>
@@ -61,7 +64,7 @@
 
                             </fieldset>
 
-                            <button type="submit">Give me a feel-good product!</button>
+                            <button type="submit">Show me a feel-good makeup!</button>
 
                         </form>
                     </section>
@@ -71,11 +74,11 @@
                 <!-- DOM element inserted dynamically by JS -->
                 <section class="productDisplay">
 
-                    <div id="product-container">
+                    <div id="productContainer">
 
                     </div>
 
-                    <div id="description-container">
+                    <div id="descriptionContainer">
 
                     </div>
 
@@ -83,7 +86,7 @@
 
                 <aside class="tagDefinition">
                     <ul>
-                        <li class="crueltyfree">
+                        <li class="crueltyFree">
                             <i class="fa-solid fa-paw"></i>
                             <h3>Cruelty Free</h3>
                             <p>When it comes to beauty and personal care, a "cruelty-free" brand is a brand that does not test its products on animals. A brand that is truly cruelty-free does not perform any animal testing on products or ingredients at any point during the making of their products. They also ensure that their suppliers don't test on animals, and no third-parties test on animals on their behalf. </p>

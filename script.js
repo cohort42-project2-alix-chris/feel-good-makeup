@@ -17,15 +17,15 @@ makeupApp.getProducts = (type, tag) => {
         })
         .then((jsonData) => {
             makeupApp.APIcall = jsonData;
-            document.querySelector('#product-container').innerHTML = '';
-            document.querySelector("#description-container").innerHTML = '';
+            document.querySelector('#productContainer').innerHTML = '';
+            document.querySelector("#descriptionContainer").innerHTML = '';
             makeupApp.randomizer(makeupApp.APIcall);
             if (makeupApp.APIcall.length === 0) {
                 const errorHeading = document.createElement('h2');
                 errorHeading.innerText = `Sorry...`;
                 const errorMessage = document.createElement('p');
                 errorMessage.innerText = `We currently don't have any product that meets your selection. Please come back later!`;
-                document.querySelector("#product-container").append(errorHeading, errorMessage);
+                document.querySelector("#productContainer").append(errorHeading, errorMessage);
             } else {
                 makeupApp.displayProducts();
             }
@@ -38,8 +38,8 @@ makeupApp.randomizer = (makeupArray) => {
 
 // Capture the user selection on the dropdown menus
 makeupApp.getUserSelection = () => {
-    const selectedTypeValue = document.getElementById('product-type').value;
-    const selectedTagValue = document.getElementById('product-tag').value;
+    const selectedTypeValue = document.getElementById('productType').value;
+    const selectedTagValue = document.getElementById('productTag').value;
 
     if (selectedTypeValue.length > 0 && selectedTagValue.length > 0) {
         return makeupApp.getProducts(selectedTypeValue, selectedTagValue);
@@ -93,9 +93,9 @@ makeupApp.displayProducts = () => {
     const description = document.createElement('p');
     description.innerText = `Description: ${makeupApp.APIcallRandom.description}`;
 
-    document.querySelector('#product-container').append(name, brand, price, rating, image);
+    document.querySelector('#productContainer').append(name, brand, price, rating, image);
 
-    document.querySelector('#description-container').append(description);
+    document.querySelector('#descriptionContainer').append(description);
 }
 
 // Capture the form and add an event listener on the submit button
