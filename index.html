@@ -4,91 +4,132 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feel Good Makeup Generator</title>
+    <title>Feel Good Makeup</title>
+    <script src="https://kit.fontawesome.com/522cdd93db.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Feel Good Makeup Generator</h1>
-        <h2>choose a makeup that is good for you and the environment!</h2>
-    </header>
+    <div class="background">
 
-    <main>
-        <!-- Description section -->
-        <section>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam eum aliquid deserunt tempore sapiente repudiandae fugit recusandae, laudantium suscipit id quae voluptate hic, sed excepturi veniam asperiores. Quia, nostrum cupiditate!</p>
-        </section>
+        <div class="wrapper">
 
-        <!-- User interaction section -->
-        <section>
-            <form action="">
+            <header>
+                <h1>Feel Good Makeup</h1>
+                <h2>Choose a makeup that is good for you and the environment!</h2>
+            </header>
 
-                <fieldset>
+            <main>
+                <div class="descriptionSelection">
+                    <!-- Description section -->
+                    <section>
+                        <p>The most important ingredients of beauty are sunshine, fresh air and clean water, which nature provides everyday. When we need a little help from makeups, let's not forget to select a product that is good for the nature who is so generous to us.</p>
+                    </section>
 
-                    <label for="product-type">Select the product type</label>
-                    <select name="product-type" id="product-type">
-                        <option value="" disabled selected>Select the product type</option>
-                        <option value="blush">Blush</option>
-                        <option value="bronzer">Bronzer</option>
-                        <option value="eyebrow">Eyebrow</option>
-                        <option value="eyeliner">Eyeliner</option>
-                        <option value="eyeshadow">Eyeshadow</option>
-                        <option value="foundation">Foundation</option>
-                        <option value="lip_liner">Lipliner</option>
-                        <option value="lipstick">Lipstick</option>
-                        <option value="mascara">Mascara</option>
-                        <option value="nail_polish">Nailpolish</option>
-                    </select>
+                    <!-- User selection section -->
+                    <section>
+                        <form action="">
 
-                </fieldset>
+                            <fieldset>
 
-                <fieldset>
+                                <label for="product-type">Select the product type</label>
+                                <select name="product-type" id="product-type" required>
+                                    <option value="" disabled selected>Select the product type</option>
+                                    <option value="blush">Blush</option>
+                                    <option value="bronzer">Bronzer</option>
+                                    <option value="eyeliner">Eyeliner</option>
+                                    <option value="eyeshadow">Eyeshadow</option>
+                                    <option value="foundation">Foundation</option>
+                                    <option value="lip_liner">Lipliner</option>
+                                    <option value="lipstick">Lipstick</option>
+                                    <option value="mascara">Mascara</option>
+                                    <option value="nail_polish">Nailpolish</option>
+                                </select>
 
-                    <label for="product-tag">Select the product tag</label>
-                    <select name="product-tag" id="product-tag">
-                        <option value="" disabled selected>Select the product tag</option>
-                        <option value="cruelty free">Cruelty free</option>
-                        <!-- <option value="hypoallergenic">Hypoallergenic</option> -->
-                        <option value="natural">Natural</option>
-                        <option value="organic">Organic</option>
-                        <option value="vegan">Vegan</option>
-                    </select>
+                            </fieldset>
 
-                </fieldset>
+                            <fieldset>
 
-                <button type="submit">Give me a feel-good product!</button>
+                                <label for="product-tag">Select the product tag</label>
+                                <select name="product-tag" id="product-tag" required>
+                                    <option value="" disabled selected>Select the product tag</option>
+                                    <option value="cruelty free">Cruelty free</option>
+                                    <option value="natural">Natural</option>
+                                    <option value="organic">Organic</option>
+                                    <option value="vegan">Vegan</option>
+                                </select>
 
-            </form>
-        </section>
+                            </fieldset>
 
-        <!-- DOM element inserted dynamically by JS going below -->
-        <section>
+                            <button type="submit">Give me a feel-good product!</button>
 
-            <div id="product-container">
+                        </form>
+                    </section>
 
-            </div>
+                </div><!-- END of description/selection -->
 
-        </section>
+                <!-- DOM element inserted dynamically by JS -->
+                <section class="productDisplay">
 
-        <!-- Stretch goal content will be added here -->
-        <section>
+                    <div id="product-container">
 
-            <div>
+                    </div>
 
-                <ul>
+                    <div id="description-container">
 
-                </ul>
+                    </div>
 
-            </div>
+                </section>
 
-        </section>
+                <aside class="tagDefinition">
+                    <ul>
+                        <li class="crueltyfree">
+                            <i class="fa-solid fa-paw"></i>
+                            <h3>Cruelty Free</h3>
+                            <p>When it comes to beauty and personal care, a "cruelty-free" brand is a brand that does not test its products on animals. A brand that is truly cruelty-free does not perform any animal testing on products or ingredients at any point during the making of their products. They also ensure that their suppliers don't test on animals, and no third-parties test on animals on their behalf. </p>
+                        </li>
+                        <li class="natural">
+                            <i class="fa-solid fa-leaf"></i>
+                            <h3>Natural</h3>
+                            <p>Natural makeup products are cosmetics that contain ingredients from natural sources, like plants or minerals. These ingredients are also considered nontoxic and less likely to cause health problems. Since many natural makeup brands prioritize nature, they often use eco-friendly packaging as well.</p>
+                        </li>
+                        <li class="organic">
+                            <i class="fa-solid fa-tractor"></i>
+                            <h3>Organic</h3>
+                            <p>Organic cosmetics are products containing ingredients of vegetable origin but are grown biologically and without using synthetic elements or GMOs. To be defined organic, a cosmetic must contain a minimum of 95% organic ingredients and there must be no compounds of petroleum origin, paraffin, formaldehyde and dyes of synthetic origin.</p>
+                        </li>
+                        <li class="vegan">
+                            <i class="fa-solid fa-seedling"></i>
+                            <h3>Vegan</h3>
+                            <p>Vegan cosmetics are made without materials of animal origin or their traces. Conventional materials of animal origin, such as honey, beeswax, lanolin, collagen, elastin, etc., are replaced by materials derived from plants or minerals.</p>
+                        </li>
+                    </ul>
+                </aside>
 
-    </main>
 
-    <footer>
-        <p>Created at <a href="https://junocollege.com/" target="_blank">Juno College</a> by Alix & Chris / Courtesy of <a href="https://makeup-api.herokuapp.com/" target="_blank">Makeup API</a></p>
-    </footer>
+                <!-- Stretch goal content will be added here -->
+                <!-- <section>
+
+                    <div>
+
+                        <ul>
+
+                        </ul>
+
+                    </div>
+
+                </section> -->
+
+            </main>
+
+        </div>
+        <!-- END of wrapper -->
+
+        <footer>
+            <p>Created at <a href="https://junocollege.com/" target="_blank">Juno College</a> by Alix & Chris / Courtesy of <a href="https://makeup-api.herokuapp.com/" target="_blank">Makeup API</a></p>
+        </footer>
+
+    </div><!-- END of background image -->
 
     <script src="./script.js"></script>
 </body>

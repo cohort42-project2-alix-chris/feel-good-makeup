@@ -13,13 +13,12 @@ makeupApp.getProducts = (type, tag) => {
     makeupApp.url = `http://makeup-api.herokuapp.com/api/v1/products.json/?product_type=${type}&product_tags=${tag}`;
     fetch(makeupApp.url)
         .then((response) => {
-            // console.log(response);
             return response.json();
         })
         .then((jsonData) => {
             makeupApp.APIcall = jsonData;
-            console.log(jsonData);
             document.querySelector('#product-container').innerHTML = '';
+            document.querySelector("#description-container").innerHTML = '';
             makeupApp.randomizer(makeupApp.APIcall);
             if (makeupApp.APIcall.length === 0) {
                 const errorHeading = document.createElement('h2');
@@ -66,13 +65,22 @@ makeupApp.displayProducts = () => {
     if (makeupApp.APIcallRandom.rating !== null) {
         rating.innerText = `Rating: ${makeupApp.APIcallRandom.rating}`;
     } else {
-        rating.innerText = `Rating: unrated`
+        rating.innerText = `Rating: unrated`;
     };
     
-    const color = document.createElement('div');
-    color.innerText = makeupApp.APIcallRandom.product_colors.colour_name;
+    // const color = document.createElement('div');
+    // color.innerText = makeupApp.APIcallRandom.product_colors.colour_name;
     // const color = document.createElement('p');
     // color.innerText = `${makeupApp.APIcallRandom.product_colors.hex_value} ${makeupApp.APIcallRandom.product_colors.colour_name}`;
+
+    // const color = document.createElement("div");
+    // color.innerText = `${nameObject.hex_value} ${nameObject.colour_name}`;
+
+    // const arrayOfColours = makeupApp.APIcallRandom.product_colors.map((nameObject) => {
+    //     return `${nameObject.hex_value} ${nameObject.colour_name}`;
+    // })
+
+    // console.log(arrayOfColours);
 
     const image = document.createElement('img');
     image.src = makeupApp.APIcallRandom.image_link;
@@ -82,7 +90,12 @@ makeupApp.displayProducts = () => {
         event.onerror = null;
     })
 
-    document.querySelector('#product-container').append(name, brand, price, rating, color, image);
+    const description = document.createElement('p');
+    description.innerText = `Description: ${makeupApp.APIcallRandom.description}`;
+
+    document.querySelector('#product-container').append(name, brand, price, rating, image);
+
+    document.querySelector('#description-container').append(description);
 }
 
 // Capture the form and add an event listener on the submit button
