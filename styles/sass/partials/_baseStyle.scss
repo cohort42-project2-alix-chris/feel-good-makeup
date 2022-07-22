@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background-image: url('../assets/background-image.jpeg');
     background-size: cover;
@@ -12,6 +17,7 @@ body {
     width: 85%;
     margin: 0 auto;
     background-color: rgba($softGreyBeige, 0.9);
+    padding: 5%;
 };
 
 ul {

@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feel Good Makeup</title>
     <script src="https://kit.fontawesome.com/522cdd93db.js" crossorigin="anonymous"></script>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito&display=swap" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Flamenco&family=Fredericka+the+Great&family=Life+Savers&family=Rubik+Moonrocks&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
@@ -18,19 +21,19 @@
         <div class="wrapper">
 
             <header>
-                <h1>Feel Good Makeup</h1>
+                <h1>Feel Good <span>Makeup</span></h1>
                 <h2>Choose a makeup that is good for you and the environment!</h2>
             </header>
 
             <main>
-                <div class="descriptionSelection">
+
                     <!-- Description section -->
-                    <section>
+                    <section class="description">
                         <p>The most important ingredients of beauty are sunshine, fresh air and clean water, which nature provides everyday. When we need a little help from makeups, let's not forget to select a product that is good for the nature who is so generous to us.</p>
                     </section>
 
                     <!-- User selection section -->
-                    <section>
+                    <section class="formContainer">
                         <form action="">
 
                             <fieldset>
@@ -55,7 +58,7 @@
 
                                 <label for="productTag">Which eco-friendly feature is most important to you?</label>
                                 <select name="productTag" id="productTag" required>
-                                    <option value="" disabled selected>Select the product tag</option>
+                                    <option value="" disabled selected>Select the product feature</option>
                                     <option value="cruelty free">Cruelty free</option>
                                     <option value="natural">Natural</option>
                                     <option value="organic">Organic</option>
@@ -69,7 +72,7 @@
                         </form>
                     </section>
 
-                </div><!-- END of description/selection -->
+            
 
                 <!-- DOM element inserted dynamically by JS -->
                 <section class="productDisplay">

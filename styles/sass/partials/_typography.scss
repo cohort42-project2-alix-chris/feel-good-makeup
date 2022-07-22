@@ -15,16 +15,25 @@ body {
 h1, h2, h3 {
     font-family: $headingFont;
     color: $darkGreen;
+    margin: 0;
 }
 
 h1 {
     font-size: 4rem;
-    line-height: 1.2rem;
+    line-height: 3rem;
     letter-spacing: 1;
+}
+
+span {
+    font-family: 'Franklin Gothic light', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+    font-size: 3rem;
+    font-weight: 200;
 }
 
 h2 {
     font-size: 2.5rem;
+    line-height: 2rem;
 }
 
 h3 {
