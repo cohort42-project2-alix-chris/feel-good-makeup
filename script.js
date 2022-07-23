@@ -83,6 +83,8 @@ makeupApp.displayProducts = () => {
     // console.log(arrayOfColours);
 
     const image = document.createElement('img');
+    image.classList.add('productImage');
+
     image.src = makeupApp.APIcallRandom.image_link;
     image.alt = `Picture of ${makeupApp.APIcallRandom.name}`;
     image.addEventListener('error', function (event) {
@@ -90,12 +92,14 @@ makeupApp.displayProducts = () => {
         event.onerror = null;
     })
 
-    const description = document.createElement('p');
-    description.innerText = `Description: ${makeupApp.APIcallRandom.description}`;
+    // const description = document.createElement('p');
+    // description.innerText = `Description: ${makeupApp.APIcallRandom.description}`;
 
-    document.querySelector('#productContainer').append(name, brand, price, rating, image);
+    document.getElementById('productContainer').append(name, brand, price, rating, image);
 
-    document.querySelector('#descriptionContainer').append(description);
+    document.getElementById('productContainer').style.padding = '80px'; 
+
+    // document.querySelector('#descriptionContainer').append(description);
 }
 
 // Capture the form and add an event listener on the submit button
