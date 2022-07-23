@@ -19,26 +19,30 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 4rem;
-    line-height: 3rem;
-    letter-spacing: 1;
+    font-size: 5rem;
+    line-height: 4rem;
+    // letter-spacing: 1;
+    padding-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2;
 }
 
 span {
-    font-family: 'Franklin Gothic light', 'Arial Narrow', Arial, sans-serif;
+    font-family: $logoFont;
     display: block;
-    font-size: 3rem;
-    font-weight: 200;
+    text-transform: lowercase;
+    font-size: 5rem;
+    font-weight: normal;
+    letter-spacing: 2;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     line-height: 2rem;
-    color: #facd67;
 }
 
 h3 {
-    font-size: 1.5rem;
-    color: #facd67;
-}
+    font-size: 1.2rem;}
 

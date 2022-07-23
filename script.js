@@ -97,7 +97,8 @@ makeupApp.displayProducts = () => {
 
     document.getElementById('productContainer').append(name, brand, price, rating, image);
 
-    document.getElementById('productContainer').style.padding = '80px'; 
+    document.getElementById('productContainer').style.padding = '40px'; 
+    document.getElementById("productContainer").style.border = "3px dotted #984638"; 
 
     // document.querySelector('#descriptionContainer').append(description);
 }
