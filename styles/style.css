@@ -355,3 +355,11 @@ form fieldset select {
 form fieldset label {
   padding-bottom: 10px;
 }
+
+.crueltyFree p {
+  display: none;
+}
+
+.crueltyFree a:visited, p {
+  display: inline-block;
+}
