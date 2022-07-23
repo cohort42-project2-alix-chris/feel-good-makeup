@@ -50,9 +50,7 @@ makeupApp.getUserSelection = () => {
 makeupApp.displayProducts = () => {
     const name = document.createElement('h2');
     name.innerText = makeupApp.APIcallRandom.name;
-
-    const brand = document.createElement('h3');
-    brand.innerText = makeupApp.APIcallRandom.brand;
+    name.classList.add('productName');
 
     const price = document.createElement('p');
     if (makeupApp.APIcallRandom.price !== null && makeupApp.APIcallRandom.price !== '0.0' && makeupApp.APIcallRandom.price !== 0.0) {
@@ -60,6 +58,7 @@ makeupApp.displayProducts = () => {
     } else {
         price.innerText = `Price: unavailable`;
     }
+    price.classList.add('productPrice');
 
     const rating = document.createElement('p');
     if (makeupApp.APIcallRandom.rating !== null) {
@@ -95,11 +94,10 @@ makeupApp.displayProducts = () => {
     // const description = document.createElement('p');
     // description.innerText = `Description: ${makeupApp.APIcallRandom.description}`;
 
-    document.getElementById('productContainer').append(name, brand, price, rating, image);
+    document.getElementById('productContainer').append(name, price, rating, image);
 
     document.getElementById('productContainer').style.padding = '40px'; 
-    document.getElementById("productContainer").style.border = "3px dotted #984638"; 
-
+    document.getElementById("productContainer").style.border = '3px dotted #984638';
     // document.querySelector('#descriptionContainer').append(description);
 }
 

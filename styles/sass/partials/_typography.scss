@@ -33,16 +33,18 @@ span {
     font-family: $logoFont;
     display: block;
     text-transform: lowercase;
-    font-size: 5rem;
-    font-weight: normal;
+    font-size: 7rem;
+    font-weight: bold;
+    line-height: 10rem;
     letter-spacing: 2;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 2rem;
 }
 
 h3 {
-    font-size: 1.2rem;}
+    font-size: 1.2rem;
+}
 

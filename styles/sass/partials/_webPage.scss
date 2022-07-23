@@ -5,10 +5,9 @@
 form {
     outline: none;
     background-color: rgba(#facd67, 0.7);
-    // width: 80%;
     padding: 30px 0;
     margin: 0 auto;
-    border-radius: 25px;
+    border-bottom: 3px solid #984638;
     fieldset {
         border: none;
         display: flex;
@@ -22,16 +21,9 @@ form {
             font-family: $bodyFont;
             color: #984638;
             background-color: white;
-            // text-transform: uppercase;
             padding: 15px 0;
             text-align: center;
-            // margin-bottom: 40px;
-            // font-size: 0.8rem;
             border-bottom: 3px dotted #984638;
-            // background-image: url(../assets/down-arrow-green.svg);            
-            // background-repeat: no-repeat;
-            // background-size: contain;
-            // background-position: 95%;
         }
         label {
             padding-bottom: 10px;
@@ -42,19 +34,16 @@ form {
         background-color: #984638;
         padding: 12px 16px;
         font-family: $headingFont;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: normal;
-        line-height: 1.6rem;
+        line-height: 1.2rem;
         letter-spacing: 1px;
-        // text-transform: uppercase;
         text-align: center;
         border: 3px solid #984638;
-        border-radius: 25px;
-        transition: 0.3s;
+        transition: 0.4s;
         cursor: pointer;
         &:hover, &:focus {
-            border: 3px solid #984638;
-            color: #facd67;
+            color: #984638;
             background-color: white;
         }
     }
@@ -69,18 +58,54 @@ form {
 // }
 
 .productContainer {
-    background: rgba(#E4D0C3, 0.7);
+    background: rgba(#FFF, 1);
     // border: 8px dashed #facd67;
     margin: 40px auto;
     // padding: 10%;
-    width: 80%;
-    border-radius: 25px;
+    width: 100%;
+    // border-radius: 25px;
     // box-shadow: 12px 12px 3px 2px #facd67;
 }
 
+.productName {
+    padding-bottom: 20px;
+
+}
+
+.productPrice {
+    padding: 15px 0;
+}
+
 .productImage {
-    border-radius: 50px;
     width: 200px;
     height: auto;
     margin-top: 50px;
+}
+
+
+.tagDefinition {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+    .tagContainer {
+        width: 49%;
+        padding-bottom: 40px;
+        .tagTitle {
+            display: flex;
+            align-items: center;
+            padding-bottom: 12px;
+        }
+    }
+}
+
+footer {
+    background-color: #984638;
+    color: white;
+    padding: 15px 0;
+    a {
+        text-decoration: none;
+        color: #facd67;
+
+    }
 }

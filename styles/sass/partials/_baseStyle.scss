@@ -11,12 +11,16 @@ body {
     background-attachment: fixed;
 }
 
-.wrapper {
+.wrapper,
+.footerWrapper {
     max-width: 1280px;
     width: 85%;
     margin: 0 auto;
     background-color: rgba(white, 0.9);
-    padding: 15%;
+}
+
+.wrapper {
+    padding: 60px 120px;
 }
 
 p {
@@ -38,6 +42,7 @@ a {
 // }
 
 i {
-    color: $lighterGreen;
+    color: #facd67;
     font-size: 2rem;
+    padding-right: 20px;
 }
