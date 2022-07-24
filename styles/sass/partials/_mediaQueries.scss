@@ -1,0 +1,87 @@
+
+@media (max-width: 840px) {
+
+    .wrapper {
+        padding: 30px 60px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    span {
+        font-size: 6rem;
+        line-height: 6.3rem;
+        padding-top: 40px;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .wrapper,
+    .footerWrapper {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    span {
+        font-size: 5.5rem;
+        line-height: 5.3rem;
+    }
+
+    .tagDefinition {
+        flex-direction: column;
+        .tagContainer {
+        width: 100%;
+        }
+    }
+}
+
+@media (max-width: 660px) {
+
+    .wrapper {
+        padding: 15px 30px;
+    }
+
+    form {
+        fieldset {
+            select {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 540px) {
+
+    form {
+        font-size: 1.1rem;
+        fieldset {
+            select {
+                padding: 6px;
+            }
+        }
+        button {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+
+    .wrapper,
+    .footerWrapper {
+        width: 100%;
+    } 
+}

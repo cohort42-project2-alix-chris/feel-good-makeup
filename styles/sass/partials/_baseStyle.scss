@@ -11,12 +11,16 @@ body {
     background-attachment: fixed;
 }
 
-.wrapper {
+.wrapper,
+.footerWrapper {
     max-width: 1280px;
     width: 85%;
     margin: 0 auto;
-    background-color: rgba(white, 0.9);
-    padding: 15%;
+    background-color: rgba($white, 0.9);
+}
+
+.wrapper {
+    padding: 60px 120px;
 }
 
 p {
@@ -30,14 +34,10 @@ ul {
 a {
     text-decoration: none;
     cursor: pointer;
-};
-
-// button {
-//     cursor: pointer;
-//     background-color: $lighterGreen;
-// }
+}
 
 i {
-    color: $lighterGreen;
+    color: $lightYellow;
     font-size: 2rem;
+    padding-right: 20px;
 }
