@@ -3,7 +3,6 @@
 }
 
 form {
-    outline: none;
     background-color: rgba($lightYellow, 0.7);
     padding: 30px 0;
     margin: 0 auto;
@@ -19,6 +18,7 @@ form {
             width: 80%;
             appearance: none;
             border: none;
+            outline: none;
             cursor: pointer;
             font-family: $bodyFont;
             color: $darkRed;
@@ -63,7 +63,6 @@ form {
 
 .productName {
     padding-bottom: 20px;
-
 }
 
 .productPrice {
@@ -95,7 +94,7 @@ form {
 footer {
     background-color: $darkRed;
     color: $white;
-    padding: 15px 0;
+    padding: 15px 10px;
     a {
         text-decoration: none;
         color: $lightYellow;

@@ -9,29 +9,27 @@ body {
     color: $black;
     text-align: center;
     line-height: 1rem;
-    letter-spacing: 0;
 }
 
 h1, h2, h3 {
     font-family: $headingFont;
     color: $darkRed;
-    margin: 0;
 }
 
 h1 {
     font-size: 2.5rem;
-    line-height: 4rem;
-    padding-bottom: 40px;
     font-weight: normal;
+    line-height: 4rem;
     text-transform: uppercase;
+    padding-bottom: 40px;
 }
 
 span {
-    font-family: $logoFont;
     display: block;
-    text-transform: lowercase;
+    font-family: $logoFont;
     font-size: 7rem;
     font-weight: bold;
+    text-transform: lowercase;
     line-height: 8rem;
 }
 
@@ -42,5 +40,24 @@ h2 {
 
 h3 {
     font-size: 1.2rem;
+}
+
+p {
+    font-weight: 300;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+i {
+    color: $lightYellow;
+    font-size: 2rem;
+    padding-right: 20px;
 }
 
