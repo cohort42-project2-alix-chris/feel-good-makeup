@@ -1,0 +1,75 @@
+
+// h1
+
+@media (max-width: 840px) {
+
+    .wrapper {
+        padding: 30px 60px;
+    }
+
+    span {
+        font-size: 6rem;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .wrapper,
+    .footerWrapper {
+        width: 90%;
+    }
+
+    span {
+        font-size: 5rem;
+        line-height: 3rem;
+
+    }
+
+    .tagDefinition {
+    flex-direction: column;
+    .tagContainer {
+        width: 100%;
+        }
+    }
+}
+
+
+@media (max-width: 660px) {
+
+    .wrapper {
+        padding: 15px 30px;
+    }
+
+    form {
+        fieldset {
+            select {
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 660px) {
+
+    form {
+        font-size: 1rem;
+        fieldset {
+            select {
+                padding: 6px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .wrapper,
+    .footerWrapper {
+        width: 100%;
+    } 
+
+}

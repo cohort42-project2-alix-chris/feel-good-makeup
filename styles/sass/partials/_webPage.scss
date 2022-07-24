@@ -8,6 +8,7 @@ form {
     padding: 30px 0;
     margin: 0 auto;
     border-bottom: 3px solid #984638;
+    font-size: 1.2rem;
     fieldset {
         border: none;
         display: flex;
@@ -15,15 +16,20 @@ form {
         align-items: center;
         padding-bottom: 30px;
         select {
-            width: 60%;
+            width: 80%;
             appearance: none;
             border: none;
+            cursor: pointer;
             font-family: $bodyFont;
             color: #984638;
             background-color: white;
-            padding: 15px 0;
-            text-align: center;
+            padding: 12px;
+            text-align: left;
             border-bottom: 3px dotted #984638;
+            background-image: url(../assets/caret-arrow-black.png);            
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 99%;
         }
         label {
             padding-bottom: 10px;

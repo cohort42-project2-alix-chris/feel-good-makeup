@@ -255,7 +255,6 @@ h1 {
   font-size: 2.5rem;
   font-weight: normal;
   text-transform: uppercase;
-  letter-spacing: 2;
 }
 
 span {
@@ -264,8 +263,7 @@ span {
   text-transform: lowercase;
   font-size: 7rem;
   font-weight: bold;
-  line-height: 10rem;
-  letter-spacing: 2;
+  line-height: 8rem;
 }
 
 h2 {
@@ -331,6 +329,7 @@ form {
   padding: 30px 0;
   margin: 0 auto;
   border-bottom: 3px solid #984638;
+  font-size: 1.2rem;
 }
 form fieldset {
   border: none;
@@ -347,17 +346,22 @@ form fieldset {
   padding-bottom: 30px;
 }
 form fieldset select {
-  width: 60%;
+  width: 80%;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   border: none;
+  cursor: pointer;
   font-family: "Nunito", sans-serif;
   color: #984638;
   background-color: white;
-  padding: 15px 0;
-  text-align: center;
+  padding: 12px;
+  text-align: left;
   border-bottom: 3px dotted #984638;
+  background-image: url(../assets/caret-arrow-black.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 99%;
 }
 form fieldset label {
   padding-bottom: 10px;
@@ -435,4 +439,54 @@ footer {
 footer a {
   text-decoration: none;
   color: #facd67;
+}
+
+@media (max-width: 840px) {
+  .wrapper {
+    padding: 30px 60px;
+  }
+  span {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 760px) {
+  .wrapper,
+.footerWrapper {
+    width: 90%;
+  }
+  span {
+    font-size: 5rem;
+    line-height: 3rem;
+  }
+  .tagDefinition {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tagDefinition .tagContainer {
+    width: 100%;
+  }
+}
+@media (max-width: 660px) {
+  .wrapper {
+    padding: 15px 30px;
+  }
+  form fieldset select {
+    width: 100%;
+  }
+}
+@media (max-width: 660px) {
+  form {
+    font-size: 1rem;
+  }
+  form fieldset select {
+    padding: 6px;
+  }
+}
+@media (max-width: 420px) {
+  .wrapper,
+.footerWrapper {
+    width: 100%;
+  }
 }
