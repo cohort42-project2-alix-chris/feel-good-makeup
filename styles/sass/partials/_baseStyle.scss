@@ -16,7 +16,7 @@ body {
     max-width: 1280px;
     width: 85%;
     margin: 0 auto;
-    background-color: rgba(white, 0.9);
+    background-color: rgba($white, 0.9);
 }
 
 .wrapper {
@@ -36,13 +36,8 @@ a {
     cursor: pointer;
 };
 
-// button {
-//     cursor: pointer;
-//     background-color: $lighterGreen;
-// }
-
 i {
-    color: #facd67;
+    color: $lightYellow;
     font-size: 2rem;
     padding-right: 20px;
 }
