@@ -35,7 +35,6 @@ makeupApp.getProducts = (type, tag) => {
         })
 }
 
-// Build a randomizer
 makeupApp.randomizer = (makeupArray) => {
     makeupApp.APIcallRandom = makeupArray[Math.floor(Math.random() * makeupArray.length)];
 }
@@ -107,26 +106,3 @@ makeupApp.init = () => {
 }
 
 makeupApp.init();
-
-/* Stretch Goals */
-
-// Add description on the back of the product display card when user clicks on it 
-    // const description = document.createElement('p');
-    // description.innerText = `Description: ${makeupApp.APIcallRandom.description}`;
-
-    // document.querySelector('#descriptionContainer').innerHTML = '';
-
-// Add color palette to display all colors available for displayed products
-    // document.querySelector('#descriptionContainer').append(description);
-
-    // const color = document.createElement('div');
-    // color.innerText = makeupApp.APIcallRandom.product_colors.colour_name;
-    // const color = document.createElement('p');
-    // color.innerText = `${makeupApp.APIcallRandom.product_colors.hex_value} ${makeupApp.APIcallRandom.product_colors.colour_name}`;
-
-    // const color = document.createElement("div");
-    // color.innerText = `${nameObject.hex_value} ${nameObject.colour_name}`;
-
-    // const arrayOfColours = makeupApp.APIcallRandom.product_colors.map((nameObject) => {
-    //     return `${nameObject.hex_value} ${nameObject.colour_name}`;
-    // })
